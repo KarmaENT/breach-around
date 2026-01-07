@@ -41,7 +41,7 @@ jobs:
       - name: Create immutable zip archive
         run: |
           mkdir -p dist/zip
-          zip -r "dist/zip/${{ github.repository##*/ }}-${{ steps.version.outputs.version }}.zip" . \
+          zip -r "dist/zip/${{ github.repository*/ }}-${{ steps.version.outputs.version }}.zip" . \
             -x ".git/*" ".github/*"
 
       - name: Create GitHub Release
