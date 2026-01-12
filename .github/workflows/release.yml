@@ -104,6 +104,7 @@ jobs:
         if: env.build_package == 'true' && startsWith(github.ref_name, 'v')
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
+          password: ${{ secrets.PYPI_API_TOKEN }}  # Add this line
           print-hash: true
           verbose: true
 

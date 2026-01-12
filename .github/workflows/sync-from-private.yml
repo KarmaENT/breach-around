@@ -37,7 +37,7 @@ jobs:
       - name: Checkout private repository
         uses: actions/checkout@v4
         with:
-          repository: Fused-Gaming/breach-checker
+          repository: KarmaENT/breach-checker
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           path: private-repo
           ref: ${{ github.event.inputs.tag_name || github.event.client_payload.tag_name }}
